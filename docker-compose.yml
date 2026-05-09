@@ -1,0 +1,29 @@
+# Placeholder service graph — configure build commands, env, volumes, and networks when implementing.
+version: "3.9"
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment: {}
+    ports: []
+
+  redis:
+    image: redis:7-alpine
+    ports: []
+
+  api:
+    build:
+      context: ./backend
+    environment: {}
+    ports: []
+
+  worker:
+    build:
+      context: ./backend
+    environment: {}
+
+  frontend:
+    build:
+      context: ./frontend
+    environment: {}
+    ports: []
